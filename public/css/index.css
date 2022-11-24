@@ -135,20 +135,19 @@ span {
     align-items: center;
     padding: 0px;
     gap: 23px;
-    width: 636px;
     height: 22px;
-    left: 162px;
     top: 4px;
 }
 
 .navbar li a {
-    height: 22px;
+    height: 30px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 30px;
     color: #FFFFFF;
+    padding: 5px;
 }
 
 .simule-text {
@@ -232,6 +231,7 @@ span {
     text-transform: uppercase;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 footer {
