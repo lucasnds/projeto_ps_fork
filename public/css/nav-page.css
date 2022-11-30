@@ -1,16 +1,15 @@
 .content-container-nav {
-  top: 0;
-  height: 654px;
+    top: 0;
+    height: 100vh;
 }
 
 .content-container-nav h4 {
-  left: 0;
-  top: 83px
+    left: 0;
+    top: 83px
 }
 
 .content-container-nav p {
-  width: 866px;
-  top: 126px;
-
-  text-align: justify;
+    width: 866px;
+    top: 126px;
+    text-align: justify;
 }

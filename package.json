@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "projeto final de processos de software e programação front-end",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lucassena08/projeto_ps.git"
