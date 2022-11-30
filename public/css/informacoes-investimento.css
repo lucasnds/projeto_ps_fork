@@ -6,6 +6,10 @@
         margin: 50px 0px;
     }
     
+    html {
+        font-size: 62.5%;
+    }
+    
     form {
         margin: 20px;
     }
@@ -18,8 +22,7 @@
         line-height: 19px;
         color: #000000;
         position: relative;
-        width: 247px;
-        left: -102px;
+        width: 65%;
         margin-top: 12px;
     }
     
@@ -176,7 +179,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 800;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 19px;
         letter-spacing: -0.02em;
         text-transform: uppercase;
