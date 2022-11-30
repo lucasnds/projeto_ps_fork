@@ -17,20 +17,20 @@ iterableInputs[2].value = duracaoInvestimento
 
 let aliquota = 0
 const calcularAliquota = () => {
-  switch (true) {
-    case (duracaoInvestimento < 6):
-      aliquota = 0.225
-      break;
-    case (duracaoInvestimento >= 6 && duracaoInvestimento < 12):
-      aliquota = 0.2
-      break;
-    case (duracaoInvestimento >= 12 && duracaoInvestimento <= 24):
-      aliquota = 0.175
-      break;
-    case (duracaoInvestimento > 24):
-      aliquota = 0.15
-      break;
-  }
+    switch (true) {
+        case (duracaoInvestimento < 6):
+            aliquota = 0.225
+            break;
+        case (duracaoInvestimento >= 6 && duracaoInvestimento < 12):
+            aliquota = 0.2
+            break;
+        case (duracaoInvestimento >= 12 && duracaoInvestimento <= 24):
+            aliquota = 0.175
+            break;
+        case (duracaoInvestimento > 24):
+            aliquota = 0.15
+            break;
+    }
 }
 calcularAliquota()
 
@@ -40,10 +40,10 @@ const taxaMensal = taxa / 12
 let valorTotal = aporteInicial
 let valorTotalSemIR = aporteInicial
 for (let i = 1; i <= duracaoInvestimento; i++) {
-  valorTotal += aporteMensal
-  valorTotalSemIR += aporteMensal
-  valorTotal += (valorTotal * taxaMensal) * aliquota
-  valorTotalSemIR += valorTotal * taxaMensal
+    valorTotal += aporteMensal
+    valorTotalSemIR += aporteMensal
+    valorTotal += (valorTotal * taxaMensal) * aliquota
+    valorTotalSemIR += valorTotal * taxaMensal
 }
 
 iterableInputs[3].value = valorTotal.toFixed(2)
@@ -53,8 +53,8 @@ iterableInputs[5].value = (valorTotalSemIR - valorTotalSemInvestimento).toFixed(
 iterableInputs[6].value = (valorTotalSemIR - valorTotal).toFixed(2)
 iterableInputs[7].value = aliquota * 100 + "%"
 
-iterableInputs[1].style.color = '#C4B420'
-iterableInputs[2].style.color = '#C4B420'
+iterableInputs[1].style.color = '#000'
+iterableInputs[2].style.color = '#000'
 iterableInputs[3].style.color = '#00982B'
 iterableInputs[4].style.color = '#00982B'
 iterableInputs[5].style.color = '#00982B'
