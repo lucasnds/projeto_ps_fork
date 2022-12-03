@@ -2,7 +2,7 @@ const inputs = document.getElementsByTagName('input')
 const iterableInputs = [...inputs]
 
 const tipoInvestimento = localStorage.getItem('tipo_investimento')
-iterableInputs[0].value = tipoInvestimento
+iterableInputs[1].value = tipoInvestimento
 console.log(tipoInvestimento)
 
 
@@ -11,9 +11,9 @@ const aporteMensal = Number(localStorage.getItem('aporte_mensal'))
 const duracaoInvestimento = Number(localStorage.getItem('duracao_investimento'))
 const valorTotalInvestido = aporteInicial + (aporteMensal * duracaoInvestimento)
 
-iterableInputs[1].value = valorTotalInvestido
+iterableInputs[2].value = valorTotalInvestido
 
-iterableInputs[2].value = duracaoInvestimento
+iterableInputs[3].value = duracaoInvestimento
 
 let aliquota = 0
 const calcularAliquota = () => {
@@ -46,26 +46,28 @@ for (let i = 1; i <= duracaoInvestimento; i++) {
     valorTotalComIR += valorTotal * taxaMensal
 }
 
-iterableInputs[3].value = valorTotalComIR.toFixed(2)
-iterableInputs[4].value = valorTotal.toFixed(2)
+iterableInputs[4].value = valorTotalComIR.toFixed(2)
+iterableInputs[5].value = valorTotal.toFixed(2)
 const valorTotalSemInvestimento = aporteInicial + (aporteMensal * duracaoInvestimento)
-iterableInputs[5].value = (valorTotalComIR - valorTotalSemInvestimento).toFixed(2)
-if (tipoInvestimento === "LCI" || "LCA") {
-    iterableInputs[6].value = "-";
-    iterableInputs[7].value = "-";
-} else if (tipoInvestimento === "Tesouro Direto") {
-    iterableInputs[6].value = ((valorTotalComIR - valorTotalSemInvestimento) * aliquota).toFixed(2)
-    iterableInputs[7].value = aliquota * 100 + "%"
-}
+iterableInputs[6].value = (valorTotalComIR - valorTotalSemInvestimento).toFixed(2)
+iterableInputs[7].value = ((valorTotalComIR - valorTotalSemInvestimento) * aliquota).toFixed(2)
+iterableInputs[8].value = aliquota * 100 + "%"
+    // if (tipoInvestimento === "LCI" || "LCA") {
+    //     iterableInputs[6].value = "-";
+    //     iterableInputs[7].value = "-";
+    // } else if (tipoInvestimento === "Tesouro Direto") {
+    //     iterableInputs[6].value = ((valorTotalComIR - valorTotalSemInvestimento) * aliquota).toFixed(2)
+    //     iterableInputs[7].value = aliquota * 100 + "%"
+    // }
 
 
-iterableInputs[1].style.color = '#000'
 iterableInputs[2].style.color = '#000'
-iterableInputs[3].style.color = '#00982B'
+iterableInputs[3].style.color = '#000'
 iterableInputs[4].style.color = '#00982B'
 iterableInputs[5].style.color = '#00982B'
-iterableInputs[6].style.color = '#FF0000'
+iterableInputs[6].style.color = '#00982B'
 iterableInputs[7].style.color = '#FF0000'
+iterableInputs[8].style.color = '#FF0000'
 
 // const labelInvest = document.getElementById('label-line-invest')
 // const labelPoupanca = document.getElementById('label-line-poupanca')

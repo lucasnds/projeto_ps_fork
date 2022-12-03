@@ -8,21 +8,21 @@ app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/views/index.html")
+    res.sendFile(__dirname + "/public/views/index.html")
 })
 
 app.get("/:foo", (req, res) => {
-  const foo = req.params.foo
+    const foo = req.params.foo
 
-  if (foo === 'favicon' || foo === 'favicon.ico') return
+    if (foo === 'favicon' || foo === 'favicon.ico') return
 
-  res.sendFile(__dirname + "/public/views/" + foo + ".html")
+    res.sendFile(__dirname + "/public/views/" + foo + ".html")
 })
 
 app.post("/", (req, res) => {
-  res.redirect("/informacoes-investimento")
+    res.redirect("/informacoes-investimento.html")
 })
 
 app.listen(3000, () => {
-  console.log("Server stated on port 3000.")
+    console.log("Server stated on port 3000.")
 })
